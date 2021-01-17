@@ -3,11 +3,33 @@
     for all users
 */
 
-// TODO: 
-//  move an active issue from SD to specified projects
+// TODO: move an active issue from SD to specified projects
 
-// Requirements:
-//  user has only jira software license (not SD)
-//  Move should be available if person is an approver in Issue
-//  It should have a single choice custom field with project names (destination project)
+/* Requirements:
+    User has only jira software license (not SD)
+    Move should be available if person is an approver in Issue
+    It should have a single choice custom field with project names (destination project)
+*/ 
 
+/* Problem(s):
+    Jira software license owners cannot update SD Issues Workflows/Fields and etc.
+    Jira doesn't allow easy and secure Issue move transition
+    SD module has other fields and functionality that doesn't exist in jira software
+*/
+
+/* Workarounds:
+    Use a groovy script for manual Issue "move"
+    Use plug-in for additional SD buttons and functionality that is available for jira software license
+    Use plug-ins functionality to move required Issue to other workflow and then add groovy script to move issue
+*/
+
+/* Idea:
+    1. Add plug-in, selected: Action for Jira Service Desk
+    2. Update Workflow with additional Move Issue status (reached for certain statuses?/all statuses?)
+    3. Create a custom single choice field (with prebuilt project names)
+    4. Add script (listener?) for workflow trasitions and if it matches requirements - move issue
+
+    By "Move Issue" -> prob. create new Issue in selected project (custom single choice field)
+    Copy the values of SD Issue to newly created Issue / Add SD Issue participants to newly created Issue
+    Delete? SD Issue
+*/  
