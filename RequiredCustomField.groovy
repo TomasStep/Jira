@@ -1,6 +1,6 @@
 /*
     Script written to make a field required if other field is selected
-    due Issue creation stage and setup on postfunction
+    due Issue creation stage and setup Validators
 */
 import com.atlassian.jira.component.ComponentAccessor;
 import com.opensymphony.workflow.InvalidInputException;
@@ -25,7 +25,3 @@ if(isOtherChosen && !person)
 {
     throw new InvalidInputException(errorMessage); 
 }
-/*
-    Known mistakes and issues:
-        1) Add script call after issue creation stage in postfunction
-*/
