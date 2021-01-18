@@ -19,7 +19,7 @@
 
 /* Workarounds:
     Use a groovy script for manual Issue "move"
-    Use plug-in for additional SD buttons and functionality that is available for jira software license
+    Use plug-in for additional SD buttons and functionality that is available for users with jira software license
     Use plug-ins functionality to move required Issue to other workflow and then add groovy script to move issue
 */
 
